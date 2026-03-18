@@ -12,37 +12,88 @@
 
 # testing
 /coverage
+/jest-coverage/
+/test-results/
+/.nyc_output/
 
 # next.js
 /.next/
 /.open-next/
 /out/
+/.swc/          # Next.js 13+ 使用的 SWC 编译器缓存
+/next-cache/    # Next.js 缓存目录
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
 *.pem
+*.log
+*.log.*
+*.tmp
+*.temp
+/.env.local.history/
 
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+debug.log*
+*.stackdump
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example   # 保留示例环境文件（推荐提交）
+!.env.template  # 保留环境变量模板文件
 
 # vercel
 .vercel
+.vercel_build_output/
+
 # cloudflare
 .output
 .wrangler
+wrangler.toml.*.bak
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+/*.tsx.bak
+/*.ts.bak
 
-#vscode
+# vscode
 .history/
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
+
+# editor
+.idea/          # WebStorm/IntelliJ
+*.sublime-project
+*.sublime-workspace
+*.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?           # Vim 交换文件
+/.nvim/
+
+# os
+Thumbs.db       # Windows
+ehthumbs.db     # Windows
+Desktop.ini     # Windows
+
+# docker
+.dockerignore
+docker-compose.override.yml
+/.docker/
+
+# pnpm
+pnpm-lock.yaml
